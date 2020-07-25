@@ -1,0 +1,2 @@
+# Ignore Vale styles from other repositories
+vale/styles/*
