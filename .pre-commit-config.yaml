@@ -24,3 +24,10 @@ repos:
     hooks:
       - id: prettier
         name: Prettier
+
+  - repo: local
+    hooks:
+      - id: dockerfile-provides-entrypoint
+        name: Vale
+        language: docker_image
+        entry: jdkato/vale:latest
