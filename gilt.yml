@@ -1,0 +1,11 @@
+- git: https://github.com/errata-ai/Microsoft
+  version: v0.7.0
+  files:
+    - src: Microsoft/
+      dst: vale/styles/Microsoft/
+
+- git: https://github.com/errata-ai/vale
+  version: v2.2.2
+  files:
+    - src: styles/vale/
+      dst: vale/styles/vale/

@@ -1,4 +1,5 @@
 ---
+exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.3.0
@@ -23,3 +24,10 @@ repos:
     hooks:
       - id: prettier
         name: Prettier
+
+  - repo: local
+    hooks:
+      - id: dockerfile-provides-entrypoint
+        name: Vale
+        language: docker_image
+        entry: jdkato/vale:latest
