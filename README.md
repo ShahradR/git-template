@@ -55,7 +55,7 @@ This configuration expects the templates to reside under the `templates/` direct
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v3.2.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -66,14 +66,14 @@ repos:
         args: [--fix=no]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v2.2.0
+    rev: v3.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
+    rev: 2.1.1
     hooks:
       - id: prettier
         name: Prettier
@@ -86,7 +86,7 @@ repos:
         entry: jdkato/vale:latest
 
 + - repo: https://github.com/aws-cloudformation/cfn-python-lint
-+   rev: v0.28.2
++   rev: v0.35.1
 +   hooks:
 +     - id: cfn-python-lint
 +       files: templates/.*\.(json|yml|yaml)$
@@ -115,7 +115,7 @@ This version of the file adds the [Haskell Dockerfile Linter](https://github.com
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v3.2.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -126,14 +126,14 @@ repos:
         args: [--fix=no]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v2.2.0
+    rev: v3.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
+    rev: 2.1.1
     hooks:
       - id: prettier
         name: Prettier
@@ -170,7 +170,7 @@ This configuration expects the OpenAPI specification file to reside under the `s
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v3.2.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -181,14 +181,14 @@ repos:
         args: [--fix=no]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v2.2.0
+    rev: v3.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 1.19.1
+    rev: 2.1.1
     hooks:
       - id: prettier
         name: Prettier
