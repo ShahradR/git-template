@@ -33,6 +33,76 @@ pre-commit install && pre-commit install --hook-type commit-msg
 [The pre-commit hooks supplied with this project will cover most situations](https://github.com/ShahradR/git-template/pull/1), but you might wish to add more to the list depending on your requirements. Below are several examples of `.pre-commit-config.yaml` files used for different use cases—use this to tailor your hooks based on your project's needs!
 
 <details>
+<summary>JavaScript/TypeScript</summary>
+
+This version of the file introduces [pre-commit/mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) to run [ESLint](https://eslint.org/), a tool to "find and fix problems in your JavaScript code."
+
+You'll need a valid ESLint configuration file to run this hook—see [Configuring ESLint](https://eslint.org/docs/user-guide/configuring) for details on how to set up your environment.
+
+[![asciicast](https://asciinema.org/a/359740.svg)](https://asciinema.org/a/359740)
+
+The pre-commit configuration has been adapted to lint both JavaScript and TypeScript code. The ESLint plugins required to run the hook must be listed under `additional_dependencies`—this particular example was taken from the [ShahradR/action-taskcat](https://github.com/ShahradR/action-taskcat) project, but you might need to customize the dependency list to fit your needs.
+
+```diff
+---
+exclude: vale/styles/*
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+        args: [--fix=no]
+
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v3.0.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
+
+  - repo: https://github.com/prettier/prettier
+    rev: 2.1.1
+    hooks:
+      - id: prettier
+        name: Prettier
+
+  - repo: local
+    hooks:
+      - id: dockerfile-provides-entrypoint
+        name: Vale
+        language: docker_image
+        entry: jdkato/vale:latest
+
++ - repo: https://github.com/pre-commit/mirrors-eslint
++   rev: v7.9.0
++   hooks:
++     - id: eslint
++       name: ESLint
++       files: \.[jt]sx?$ # *.js, *.jsx, *.ts and *.tsx
++       types: [file]
++       additional_dependencies:
++         - jest@26.4.2
++         - eslint@7.7.0
++         - typescript@4.0.2
++         - eslint-config-prettier@6.11.0
++         - eslint-config-standard@14.1.1
++         - eslint-plugin-import@2.22.0
++         - eslint-plugin-jest@23.20.0
++         - eslint-plugin-node@11.1.0
++         - eslint-plugin-promise@4.2.1
++         - eslint-plugin-standard@4.0.1
++         - "@typescript-eslint/eslint-plugin@3.10.1"
++         - "@typescript-eslint/parser@3.10.1"
+```
+
+</details>
+
+<details>
 <summary>AWS CloudFormation templates</summary>
 
 This version of the file adds the following pre-commit checks:
