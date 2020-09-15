@@ -33,6 +33,71 @@ pre-commit install && pre-commit install --hook-type commit-msg
 [The pre-commit hooks supplied with this project will cover most situations](https://github.com/ShahradR/git-template/pull/1), but you might wish to add more to the list depending on your requirements. Below are several examples of `.pre-commit-config.yaml` files used for different use cases—use this to tailor your hooks based on your project's needs!
 
 <details>
+<summary>Java</summary>
+
+This version of the configuration file adds Java support by:
+
+- Augmenting Prettier with [JHipster's Prettier plugin for Java](https://github.com/jhipster/prettier-java)
+- Running [Checkstyle](https://checkstyle.sourceforge.io/) using the pre-commit hook provided by [gherynos/pre-commit-java](https://github.com/gherynos/pre-commit-java)
+  - Checkstyle can also run as a plugin for Ant, Maven, or Gradle. Depending on your use case, you might want to run this check in your build automation tool instead
+
+#### Prettier
+
+[![asciicast](https://asciinema.org/a/359757.svg)](https://asciinema.org/a/359757)
+
+#### Checkstyle
+
+[![asciicast](https://asciinema.org/a/359758.svg)](https://asciinema.org/a/359758)
+
+```diff
+---
+exclude: vale/styles/*
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: mixed-line-ending
+        args: [--fix=no]
+
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v3.0.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
+
+  - repo: https://github.com/prettier/prettier
+    rev: 2.1.1
+    hooks:
+      - id: prettier
+        name: Prettier
++       args:
++         - --plugin=prettier-plugin-java
++       additional_dependencies:
++         - prettier-plugin-java@0.8.2
+
+  - repo: local
+    hooks:
+      - id: dockerfile-provides-entrypoint
+        name: Vale
+        language: docker_image
+        entry: jdkato/vale:latest
+
++ - repo: https://github.com/gherynos/pre-commit-java
++   rev: v0.1.0
++   hooks:
++     - id: checkstyle
++       name: Checkstyle
+```
+
+</details>
+
+<details>
 <summary>JavaScript/TypeScript</summary>
 
 This version of the file introduces [pre-commit/mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) to run [ESLint](https://eslint.org/), a tool to "find and fix problems in your JavaScript code."
