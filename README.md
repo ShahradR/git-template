@@ -51,6 +51,7 @@ This version of the configuration file adds Java support by:
 
 ```diff
 ---
+default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -110,6 +111,7 @@ The pre-commit configuration has been adapted to lint both JavaScript and TypeSc
 
 ```diff
 ---
+default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -187,6 +189,7 @@ This configuration expects the templates to reside under the `templates/` direct
 
 ```diff
 ---
+default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -247,6 +250,7 @@ This version of the file adds the [Haskell Dockerfile Linter](https://github.com
 
 ```diff
 ---
+default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -302,6 +306,7 @@ This configuration expects the OpenAPI specification file to reside under the `s
 
 ```diff
 ---
+default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
