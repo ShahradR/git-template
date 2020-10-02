@@ -64,6 +64,8 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=no]
+      - id: check-added-large-files
+        args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v3.0.0
@@ -124,6 +126,8 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=no]
+      - id: check-added-large-files
+        args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v3.0.0
@@ -202,6 +206,8 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=no]
+      - id: check-added-large-files
+        args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v3.0.0
@@ -263,6 +269,8 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=no]
+      - id: check-added-large-files
+        args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v3.0.0
@@ -319,6 +327,8 @@ repos:
       - id: detect-private-key
       - id: mixed-line-ending
         args: [--fix=no]
+      - id: check-added-large-files
+        args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v3.0.0
