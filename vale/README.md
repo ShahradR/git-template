@@ -14,7 +14,7 @@ Gilt uses releases to determine which tree to overlay in the repository. When a 
 
 ### GitHub repository page
 
-![Latest release version on GitHub is v0.7.0](../../docs/images/vale-release.png)
+![Latest release version on GitHub is v0.7.0](../docs/images/vale-release.png)
 
 ### `.gilt.yml`
 
