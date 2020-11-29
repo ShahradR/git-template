@@ -74,8 +74,8 @@ repos:
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.2.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -136,8 +136,8 @@ repos:
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.2.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -216,8 +216,8 @@ repos:
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.2.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -279,8 +279,8 @@ repos:
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.2.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -337,8 +337,8 @@ repos:
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
-  - repo: https://github.com/prettier/prettier
-    rev: 2.2.1
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.2.1
     hooks:
       - id: prettier
         name: Prettier
