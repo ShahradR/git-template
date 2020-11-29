@@ -55,7 +55,7 @@ default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -68,14 +68,14 @@ repos:
         args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v3.0.0
+    rev: v4.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 2.1.1
+    rev: 2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -117,7 +117,7 @@ default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -130,14 +130,14 @@ repos:
         args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v3.0.0
+    rev: v4.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 2.1.1
+    rev: 2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -197,7 +197,7 @@ default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -210,14 +210,14 @@ repos:
         args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v3.0.0
+    rev: v4.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 2.1.1
+    rev: 2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -260,7 +260,7 @@ default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -273,14 +273,14 @@ repos:
         args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v3.0.0
+    rev: v4.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 2.1.1
+    rev: 2.2.1
     hooks:
       - id: prettier
         name: Prettier
@@ -318,7 +318,7 @@ default_stages: [commit]
 exclude: vale/styles/*
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v3.3.0
     hooks:
       - id: check-yaml
       - id: end-of-file-fixer
@@ -331,14 +331,14 @@ repos:
         args: [--maxkb=10240]
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v3.0.0
+    rev: v4.0.0
     hooks:
       - id: commitlint
         stages: [commit-msg]
         additional_dependencies: ["@commitlint/config-conventional"]
 
   - repo: https://github.com/prettier/prettier
-    rev: 2.1.1
+    rev: 2.2.1
     hooks:
       - id: prettier
         name: Prettier
