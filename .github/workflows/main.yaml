@@ -35,4 +35,4 @@ jobs:
         with:
           node-version: 14.18.1
       - name: Release
-        run: npx semantic-release
+        run: npx semantic-release@v18.0.0
