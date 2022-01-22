@@ -31,6 +31,8 @@
     "docker-in-docker": "20.10",
     "docker-from-docker": "20.10",
     "git": "latest",
-    "github-cli": "latest"
+    "github-cli": "latest",
+    "node": "16",
+    "python": "3.10"
   }
 }
