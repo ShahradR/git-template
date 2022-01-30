@@ -30,6 +30,12 @@ repos:
 
   - repo: local
     hooks:
+      - id: alex
+        name: alex
+        entry: alex
+        language: node
+        types: [text]
+        additional_dependencies: [alex]
       - id: dockerfile-provides-entrypoint
         name: Vale
         language: docker_image
