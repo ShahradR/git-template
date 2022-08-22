@@ -7,7 +7,7 @@ jobs:
     name: Run pre-commit checks
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v2
       - uses: pre-commit/action@v3.0.0
 
@@ -15,7 +15,7 @@ jobs:
     name: Run Vale
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: errata-ai/vale-action@v2.0.1
         with:
           debug: true
@@ -30,7 +30,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v2.5.1
         with:
           node-version: 14.18.1
