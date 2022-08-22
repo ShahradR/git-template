@@ -36,6 +36,7 @@ repos:
         language: node
         types: [text]
         additional_dependencies: [alex]
+        exclude: ^CODE_OF_CONDUCT.md$
       - id: dockerfile-provides-entrypoint
         name: Vale
         language: docker_image
