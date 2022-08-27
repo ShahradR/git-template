@@ -15,6 +15,11 @@ repos:
       - id: check-added-large-files
         args: [--maxkb=10240]
 
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.10.2
+    hooks:
+      - id: markdown-link-check
+
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v7.0.1
     hooks:
