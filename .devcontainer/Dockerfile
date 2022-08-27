@@ -8,4 +8,4 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends vim python3-pip
 
-RUN pip install pre-commit
+RUN pip install pre-commit detect-secrets

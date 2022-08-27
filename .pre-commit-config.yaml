@@ -41,3 +41,9 @@ repos:
         name: Vale
         language: docker_image
         entry: jdkato/vale:latest
+
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.3.0
+    hooks:
+      - name: Scan for secrets
+        id: detect-secrets
