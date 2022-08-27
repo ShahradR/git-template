@@ -1,6 +1,10 @@
 # git-template
 
-![GitHub workflow](https://img.shields.io/github/workflow/status/ShahradR/git-template/CI%20workflow?logo=github) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![License: MIT-0](https://img.shields.io/badge/license-MIT--0-yellowgreen)](https://spdx.org/licenses/MIT-0.html) [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+![GitHub workflow](https://img.shields.io/github/workflow/status/ShahradR/git-template/CI%20workflow?logo=github)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![License: MIT-0](https://img.shields.io/badge/license-MIT--0-yellowgreen)](https://spdx.org/licenses/MIT-0.html)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 Language-agnostic Git template repository to kickstart your projects!
 
@@ -8,38 +12,55 @@ Language-agnostic Git template repository to kickstart your projects!
 
 ### Create a new repository from the template
 
-To use this template for your new project, click **"Use this template"** near the top of the page, and select a name for your repository to create it in your own account or organization.
+To use this template for your new project, click **"Use this template"** near
+the top of the page, and select a name for your repository to create it in your
+own account or organization.
 
-![](./docs/images/github-create-repo-from-template.gif)
+![Creating a repository from this template](./docs/images/github-create-repo-from-template.gif)
 
 ### Clone your new repository locally
 
-Once your new repository has been created, clone the repository to your local computer using the `git clone` command.
+Once your new repository has been created, clone the repository to your local
+computer using the `git clone` command.
 
-```
+```shell
 git clone https://github.com/<owner name>/<repository name>
 ```
 
 ### Configure pre-commit
 
-This template is configured to run Git hooks using [pre-commit](https://pre-commit.com/), a "framework for managing and maintaining multi-language pre-commit hooks." Linters and common checks are ran against your commits, catching errors and making sure your code is up to snuff before sharing it with the world!
+This template is configured to run Git hooks using
+[pre-commit](https://pre-commit.com/), a "framework for managing and maintaining
+multi-language pre-commit hooks." Linters and common checks are ran against your
+commits, catching errors and making sure your code is up to snuff before sharing
+it with the world!
 
-After pre-commit is installed (consider using a [Python virtual environment](https://docs.python.org/3/library/venv.html)), run the following command to configure the pre-commit hooks for your repository:
+After pre-commit is installed (consider using a
+[Python virtual environment](https://docs.python.org/3/library/venv.html)), run
+the following command to configure the pre-commit hooks for your repository:
 
-```
+```shell
 pre-commit install && pre-commit install --hook-type commit-msg
 ```
 
-[The pre-commit hooks supplied with this project will cover most situations](https://github.com/ShahradR/git-template/pull/1), but you might wish to add more to the list depending on your requirements. Below are several examples of `.pre-commit-config.yaml` files used for different use cases—use this to tailor your hooks based on your project's needs!
+[The pre-commit hooks supplied with this project will cover most situations](https://github.com/ShahradR/git-template/pull/1),
+but you might wish to add more to the list depending on your requirements. Below
+are several examples of `.pre-commit-config.yaml` files used for different use
+cases—use this to tailor your hooks based on your project's needs!
 
 <details>
 <summary>Java</summary>
 
 This version of the configuration file adds Java support by:
 
-- Augmenting Prettier with [JHipster's Prettier plugin for Java](https://github.com/jhipster/prettier-java)
-- Running [Checkstyle](https://checkstyle.sourceforge.io/) using the pre-commit hook provided by [gherynos/pre-commit-java](https://github.com/gherynos/pre-commit-java)
-  - Checkstyle can also run as a plugin for Ant, Maven, or Gradle. Depending on your use case, you might want to run this check in your build automation tool instead
+- Augmenting Prettier with
+  [JHipster's Prettier plugin for Java](https://github.com/jhipster/prettier-java)
+- Running [Checkstyle](https://checkstyle.sourceforge.io/) using the pre-commit
+  hook provided by
+  [gherynos/pre-commit-java](https://github.com/gherynos/pre-commit-java)
+  - Checkstyle can also run as a plugin for Ant, Maven, or Gradle. Depending on
+    your use case, you might want to run this check in your build automation
+    tool instead
 
 #### Prettier
 
@@ -103,13 +124,22 @@ repos:
 <details>
 <summary>JavaScript/TypeScript</summary>
 
-This version of the file introduces [pre-commit/mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) to run [ESLint](https://eslint.org/), a tool to "find and fix problems in your JavaScript code."
+This version of the file introduces
+[pre-commit/mirrors-eslint](https://github.com/pre-commit/mirrors-eslint) to run
+[ESLint](https://eslint.org/), a tool to "find and fix problems in your
+JavaScript code."
 
-You'll need a valid ESLint configuration file to run this hook—see [Configuring ESLint](https://eslint.org/docs/user-guide/configuring) for details on how to set up your environment.
+You'll need a valid ESLint configuration file to run this hook—see
+[Configuring ESLint](https://eslint.org/docs/user-guide/configuring) for details
+on how to set up your environment.
 
 [![asciicast](https://asciinema.org/a/359740.svg)](https://asciinema.org/a/359740)
 
-The pre-commit configuration has been adapted to lint both JavaScript and TypeScript code. The ESLint plugins required to run the hook must be listed under `additional_dependencies`—this particular example was taken from the [ShahradR/action-taskcat](https://github.com/ShahradR/action-taskcat) project, but you might need to customize the dependency list to fit your needs.
+The pre-commit configuration has been adapted to lint both JavaScript and
+TypeScript code. The ESLint plugins required to run the hook must be listed
+under `additional_dependencies`—this particular example was taken from the
+[ShahradR/action-taskcat](https://github.com/ShahradR/action-taskcat) project,
+but you might need to customize the dependency list to fit your needs.
 
 ```diff
 ---
@@ -178,8 +208,12 @@ repos:
 
 This version of the file adds the following pre-commit checks:
 
-- [CloudFormation Linter](https://github.com/aws-cloudformation/cfn-python-lint) to "validate CloudFormation yaml/json templates against the CloudFormation Resource Specification"
-- [Stelligent cfn_nag](https://github.com/stelligent/cfn_nag) to "look for patterns in CloudFormation templates that may indicate insecure infrastructure"
+- [CloudFormation Linter](https://github.com/aws-cloudformation/cfn-python-lint)
+  to "validate CloudFormation yaml/json templates against the CloudFormation
+  Resource Specification"
+- [Stelligent cfn_nag](https://github.com/stelligent/cfn_nag) to "look for
+  patterns in CloudFormation templates that may indicate insecure
+  infrastructure"
 
 #### CloudFormation Linter
 
@@ -189,7 +223,8 @@ This version of the file adds the following pre-commit checks:
 
 [![asciicast](https://asciinema.org/a/308270.svg)](https://asciinema.org/a/308270)
 
-This configuration expects the templates to reside under the `templates/` directory, at the root of the repository.
+This configuration expects the templates to reside under the `templates/`
+directory, at the root of the repository.
 
 ```diff
 ---
@@ -250,7 +285,10 @@ repos:
 <details>
 <summary>Docker containers</summary>
 
-This version of the file adds the [Haskell Dockerfile Linter](https://github.com/hadolint/hadolint) "a smarter Dockerfile linter that helps you build best practice Docker images" as a pre-commit hook.
+This version of the file adds the
+[Haskell Dockerfile Linter](https://github.com/hadolint/hadolint) "a smarter
+Dockerfile linter that helps you build best practice Docker images" as a
+pre-commit hook.
 
 [![asciicast](https://asciinema.org/a/335409.svg)](https://asciinema.org/a/335409)
 
@@ -306,11 +344,14 @@ repos:
 <details>
 <summary>OpenAPI/Swagger specifications</summary>
 
-This version of the file adds [speccy](https://github.com/wework/speccy) as a pre-commit hook, to "enforce quality rules on your OpenAPI 3.0.x specifications."
+This version of the file adds [speccy](https://github.com/wework/speccy) as a
+pre-commit hook, to "enforce quality rules on your OpenAPI 3.0.x
+specifications."
 
 [![asciicast](https://asciinema.org/a/308584.svg)](https://asciinema.org/a/308584)
 
-This configuration expects the OpenAPI specification file to reside under the `specs/` directory, at the root of the repository.
+This configuration expects the OpenAPI specification file to reside under the
+`specs/` directory, at the root of the repository.
 
 ```diff
 ---
@@ -364,18 +405,28 @@ repos:
 
 ### Configure your continuous integration pipeline
 
-TODO: Configuration steps for GitHub Actions will change once workflow templates are implemented. See [ShahradR/git-template#15](https://github.com/ShahradR/git-template/issues/15) for more details.
+TODO: Configuration steps for GitHub Actions will change once workflow templates
+are implemented. See
+[ShahradR/git-template#15](https://github.com/ShahradR/git-template/issues/15)
+for more details.
 
 ### Update your LICENSE file
 
-This repository is licensed under [MIT No Attribution (MIT-0)](https://spdx.org/licenses/MIT-0.html)—you are free to use this template for your project without the need to worry about attribution.
+This repository is licensed under
+[MIT No Attribution (MIT-0)](https://spdx.org/licenses/MIT-0.html)—you are free
+to use this template for your project without the need to worry about
+attribution.
 
-Update the LICENSE file with a license appropriate for your project! Visit https://choosealicense.com/ to see common open-source licenses.
+Update the LICENSE file with a license appropriate for your project! Visit
+<https://choosealicense.com/> to see common open-source licenses.
 
 ### Update the README file
 
-Once everything has been set up, delete this file and replace it with a README tailored to your project!
+Once everything has been set up, delete this file and replace it with a README
+tailored to your project!
 
 ### Update the Code of Conduct contact information
 
-Update the `[INSERT CONTACT METHOD]` string in the project's Code of Conduct to include an e-mail address owned by a member of your community to help mediate any disputes.
+Update the `[INSERT CONTACT METHOD]` string in the project's Code of Conduct to
+include an e-mail address owned by a member of your community to help mediate
+any disputes.
