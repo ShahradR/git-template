@@ -25,6 +25,12 @@ repos:
     hooks:
       - id: markdownlint-cli2
 
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.1
+    hooks:
+      - id: codespell
+        stages: [commit]
+
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v7.0.1
     hooks:
@@ -47,6 +53,7 @@ repos:
         types: [text]
         additional_dependencies: [alex]
         exclude: ^CODE_OF_CONDUCT.md$
+        stages: [commit]
       - id: dockerfile-provides-entrypoint
         name: Vale
         language: docker_image
