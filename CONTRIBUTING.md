@@ -117,7 +117,7 @@ will highlight the subject line in red if it exceeds 50 characters, and will
 also highlight the next line if it contains any text.
 
 This repository is Commitizen-friendly. By running `git cz` or `cz`, the CLI
-will promt the contributor with a series of questions and help craft a commit
+will prompt the contributor with a series of questions and help craft a commit
 message based on the responses. The Commitizen CLI is automatically installed to
 the devcontainer.
 
@@ -150,7 +150,7 @@ the change across multiple topic branches.
 > **Note**</br> A good rule of thumb is to look at what the commit message will
 > be. If you find that explaining the changes introduced in your commit is
 > complicated, or fits into more than one type category, that might be an
-> indication that the change needs to be split into multipe commits.
+> indication that the change needs to be split into multiple commits.
 
 For an in-depth review of atomic commits and how they can help with your
 development process, see [_Make Atomic Git Commits_ by Aleksandr
