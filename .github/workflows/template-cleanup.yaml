@@ -24,7 +24,7 @@ jobs:
       - name: Remove README documentation
         run: |
           rm -f README.md
-          rm -f docs/images/github-create-repo-from-template.gif
+          rm -f doc-files/images/github-create-repo-from-template.gif
 
       - name: Remove project license file
         run: |
