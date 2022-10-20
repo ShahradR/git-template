@@ -1,0 +1,92 @@
+# Inspired by the JetBrains IntelliJ Platform Plugin Template's cleanup
+# workflow. See https://bit.ly/3scEdsh for more details.
+
+name: Template Cleanup
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  template-cleanup:
+    name: Template Cleanup
+    runs-on: ubuntu-latest
+    if: github.event.repository.name != 'git-template'
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch Sources
+        uses: actions/checkout@v3
+      - name: Update Dependabot scope
+        run: |
+          sed -i "s/prefix: fix/prefix: ci/g" .github/dependabot.yaml
+
+      - name: Remove README documentation
+        run: |
+          rm -f README.md
+          rm -f docs/images/github-create-repo-from-template.gif
+
+      - name: Remove project license file
+        run: |
+          rm -f LICENSE
+
+      - name: Delete this workflow to prevent execution on next commit
+        run: |
+          rm -f .github/workflows/template-cleanup.yaml
+
+      - name: Amend the first commit with changes from the cleanup workflow
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit --amend -F - << EOF
+          chore: scaffold project for development
+
+          Scaffold this project for development by creating a base repository and
+          a development container which includes the following tools:
+
+          - Alex.js (https://alexjs.com/), a tool to help find unequal phrasing in
+            text
+          - Codespell (https://bit.ly/3TkBAks) a tool to check code for common
+            misspellings
+          - Commitizen (https://commitizen-tools.github.io/commitizen/), a tool
+            used to define a standard way of committing rules and communicating
+            them
+          - Commitlint (https://commitlint.js.org), which helps your team adhere
+            to a commit convention
+          - The Contributor Covenant (https://www.contributor-covenant.org/) code
+            of conduct, the first and most popular code of conduct for open and
+            ethical source communities
+          - detect-secrets (https://bit.ly/2FkNBon), an enterprise friendly way of
+            detecting and preventing secrets in code
+          - Markdownlint (https://github.com/DavidAnson/markdownlint), a style
+            checker and lint tool for Markdown/CommonMark files
+          - Prettier (https://prettier.io/), an opinionated code formatter
+          - Semantic Release (https://semantic-release.gitbook.io/), a fully
+            automated version management and package publishing tool
+          - Vale (https://vale.sh/), an open-source command-line tool that brings
+            your editorial style guide to life.
+
+          Rules are enforced using pre-commit (https://pre-commit.com/) which runs
+          all the tools listed above in addition to the following out-of-the box hooks
+          (see https://bit.ly/3MOyKBx for more details):
+
+          - check-yaml
+          - end-of-file-fixer
+          - trailing-whitespace
+          - check-case-conflict
+          - detect-private-key
+          - mixed-line-ending
+          - check-added-large-files
+
+          See https://bit.ly/3ES4QdG for more details on the tools introduced in this
+          commit and how to use them.
+
+          EOF
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
+          force: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
