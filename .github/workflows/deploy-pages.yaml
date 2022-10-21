@@ -23,6 +23,9 @@ concurrency:
 
 jobs:
   deploy:
+    # Check if this workflow was triggered after a new repository was created
+    # using this template. If so, skip execution.
+    if: ${{ !contains(github.event.head_commit.message, 'Initial commit') }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
