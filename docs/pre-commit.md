@@ -98,10 +98,12 @@ no two files have the same name, regardless of the case used.
 This hook detects private keys and other secrets that might have been
 inadvertently staged, and blocks the commit.
 
-> **Note:** This hook only checks files for [certain
-> keywords][private-key-words]—if a private key is exported as binary (by
-> omitting the `--armor` flag when exporting PGP keys, for example), this hook
-> won't flag the file and allow potentially sensitive data to be committed.
+!!! note
+
+    This hook only checks files for [certain keywords][private-key-words]—if a
+    private key is exported as binary (by omitting the `--armor` flag when
+    exporting PGP keys, for example), this hook won't flag the file and allow
+    potentially sensitive data to be committed.
 
 [![asciicast][asciinema-key-svg]][asciinema-key-link]
 
@@ -125,8 +127,11 @@ This commit-msg hook verifies that commit messages follow the [Conventional
 Commits][conventional-standard] specification. A full list of checks can be
 found [here][conventional-keywords].
 
-> **Note:** This commit hook needs to be installed separately, using
-> `pre-commit install --hook-type commit-msg`
+!!! note
+
+    This commit hook needs to be installed separately from the others, using
+    `pre-commit install --hook-type commit-msg`. This is done automatically
+    when using the development container.
 
 [![asciicast][asciinema-commitlint-svg]][asciinema-commitlint-link]
 
@@ -157,9 +162,15 @@ found [here][conventional-keywords].
 [asciinema-commitlint-svg]: https://asciinema.org/a/304493.svg
 [asciinema-commitlint-link]: https://asciinema.org/a/304493
 [prettier]: https://prettier.io
+
+<!-- markdownlint-disable link-image-reference-definitions -->
+
 [private-key-words]:
   https://github.com/pre-commit/pre-commit-hooks/blob/d9ccd95055e5e3e6057b41b124857c93280b6bdd/pre_commit_hooks/detect_private_key.py#L5-L14
 [conventional-standard]: https://www.conventionalcommits.org/en/v1.0.0/
+
+<!-- markdownlint-enable link-image-reference-definitions -->
+
 [conventional-keywords]:
   https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional
 [hook-yaml]:
