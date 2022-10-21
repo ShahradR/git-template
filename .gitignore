@@ -54,3 +54,8 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/linux,windows,visualstudiocode
+
+### MkDocs ###
+
+# GitHub Pages site directory
+_site/
