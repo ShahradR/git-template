@@ -26,6 +26,12 @@ jobs:
           rm -f README.md
           rm -f doc-files/images/github-create-repo-from-template.gif
 
+      - name: Remove MkDocs documentation
+        run: |
+          rm -f mkdocs.yml
+          rm -f .github/workflows/deploy-pages.yaml
+          rm -rf docs/
+
       - name: Remove project license file
         run: |
           rm -f LICENSE
