@@ -3,6 +3,9 @@ site_url: ""
 use_directory_urls: false
 plugins: []
 site_dir: _site
+repo_url: https://github.com/ShahradR/git-template
+repo_name: ShahradR/git-template
+edit_uri: ""
 theme:
   name: material
   palette:
