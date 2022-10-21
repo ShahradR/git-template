@@ -16,7 +16,7 @@ To use this template for your new project, click **"Use this template"** near
 the top of the page, and select a name for your repository to create it in your
 own account or organization.
 
-![Creating a repository from this template](./docs/images/github-create-repo-from-template.gif)
+![Creating a repository from this template](./doc-files/images/github-create-repo-from-template.gif)
 
 ### Clone your new repository locally
 

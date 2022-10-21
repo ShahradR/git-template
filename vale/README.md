@@ -24,7 +24,7 @@ latest version.
 
 ### GitHub repository page
 
-![Latest release version on GitHub is v0.7.0](../docs/images/vale-release.png)
+![Latest release version on GitHub is v0.7.0](../doc-files/images/vale-release.png)
 
 ### `.gilt.yml`
 
