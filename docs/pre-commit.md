@@ -65,7 +65,7 @@ practices and avoid errors before your code is pushed to the repository.
 This hook checks `.yaml` files for valid syntax, using the [ruamel.yaml][ruamel]
 YAML loader/dumper for Python.
 
-[![asciicast][asciinema-yaml-svg]][asciinema-yaml-link]
+<script src="https://asciinema.org/a/304129.js" id="asciicast-304129" async></script>
 
 ### Fix End of Files
 
@@ -74,13 +74,13 @@ examples are the GNU diff and sort tools—[see this StackExchange question for 
 detailed explanation][stackexchange-blank-lines]). This hook ensures that all
 files pushed to the repository end with a new line.
 
-[![asciicast][asciinema-eof-svg]][asciinema-eof-link]
+<script src="https://asciinema.org/a/304097.js" id="asciicast-304097" async></script>
 
 ### Trim Trailing Spaces
 
 This hook removes invisible blank characters at the end of a line.
 
-[![asciicast][asciinema-spaces-svg]][asciinema-spaces-link]
+<script src="https://asciinema.org/a/304086.js" id="asciicast-304086" async></script>
 
 ### Check for case conflicts
 
@@ -91,7 +91,7 @@ case-insensitive.
 To prevent conflicts between the two operating systems, this hook ensures that
 no two files have the same name, regardless of the case used.
 
-[![asciicast][asciinema-case-svg]][asciinema-case-link]
+<script src="https://asciinema.org/a/304090.js" id="asciicast-304090" async></script>
 
 ### Detect Private Key
 
@@ -105,21 +105,21 @@ inadvertently staged, and blocks the commit.
     exporting PGP keys, for example), this hook won't flag the file and allow
     potentially sensitive data to be committed.
 
-[![asciicast][asciinema-key-svg]][asciinema-key-link]
+<script src="https://asciinema.org/a/304082.js" id="asciicast-304082" async></script>
 
 ### Mixed line endings
 
 This hook flags files that contain both Windows (CRLF) and Linux (LF) file
 endings.
 
-[![asciicast][asciinema-ending-svg]][asciinema-ending-link]
+<script src="https://asciinema.org/a/304109.js" id="asciicast-304109" async></script>
 
 ### Prettier
 
 This hook runs the [Prettier][prettier] code formatter on all files before
 committing.
 
-[![asciicast][asciinema-prettier-svg]][asciinema-prettier-link]
+<script src="https://asciinema.org/a/304492.js" id="asciicast-304492" async></script>
 
 ### commitlint
 
@@ -133,7 +133,7 @@ found [here][conventional-keywords].
     `pre-commit install --hook-type commit-msg`. This is done automatically
     when using the development container.
 
-[![asciicast][asciinema-commitlint-svg]][asciinema-commitlint-link]
+<script src="https://asciinema.org/a/304493.js" id="asciicast-304493" async></script>
 
 [gitignore.io]: https://gitignore.io
 [gitattributes-source]:
@@ -142,25 +142,6 @@ found [here][conventional-keywords].
 [pre-commit]: https://pre-commit.com
 [stackexchange-blank-lines]:
   https://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file
-
-<!--asciinema links-->
-
-[asciinema-yaml-svg]: https://asciinema.org/a/304129.svg
-[asciinema-yaml-link]: https://asciinema.org/a/304129
-[asciinema-eof-svg]: https://asciinema.org/a/304097.svg
-[asciinema-eof-link]: https://asciinema.org/a/304097
-[asciinema-spaces-svg]: https://asciinema.org/a/304086.svg
-[asciinema-spaces-link]: https://asciinema.org/a/304086
-[asciinema-case-svg]: https://asciinema.org/a/304090.svg
-[asciinema-case-link]: https://asciinema.org/a/304090
-[asciinema-key-svg]: https://asciinema.org/a/304082.svg
-[asciinema-key-link]: https://asciinema.org/a/304082
-[asciinema-ending-svg]: https://asciinema.org/a/304109.svg
-[asciinema-ending-link]: https://asciinema.org/a/304109
-[asciinema-prettier-svg]: https://asciinema.org/a/304492.svg
-[asciinema-prettier-link]: https://asciinema.org/a/304492
-[asciinema-commitlint-svg]: https://asciinema.org/a/304493.svg
-[asciinema-commitlint-link]: https://asciinema.org/a/304493
 [prettier]: https://prettier.io
 
 <!-- markdownlint-disable link-image-reference-definitions -->
