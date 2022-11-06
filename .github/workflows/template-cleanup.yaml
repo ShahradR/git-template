@@ -32,6 +32,7 @@ jobs:
           rm -f .github/workflows/deploy-pages.yaml
           rm -rf docs/
           sed -i "/- scripts/d" .markdownlint.yaml
+          sed "9;19,25d" .pre-commit-config.yaml
 
       - name: Remove project license file
         run: |

@@ -6,6 +6,7 @@ repos:
     rev: v4.1.0
     hooks:
       - id: check-yaml
+        exclude: ^mkdocs.yml$
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: check-case-conflict
@@ -14,6 +15,14 @@ repos:
         args: [--fix=no]
       - id: check-added-large-files
         args: [--maxkb=10240]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+      - id: check-yaml
+        name: Check MkDocs YAML file
+        args: [--unsafe]
+        files: ^mkdocs.yml$
 
   - repo: https://github.com/tcort/markdown-link-check
     rev: v3.10.2
