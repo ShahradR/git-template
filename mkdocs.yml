@@ -25,6 +25,8 @@ theme:
         name: Switch to light mode
   features:
     - content.code.annotate
+extra_css:
+  - styles/cost-admonitions.css
 markdown_extensions:
   - admonition
   - pymdownx.details
