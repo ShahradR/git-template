@@ -39,7 +39,7 @@ jobs:
           pip install --upgrade git+https://${{ secrets.GH_TOKEN }}@github.com/squidfunk/mkdocs-material-insiders.git
           mkdocs build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           # Upload the _site directory. `mkdocs build` is configured to publish
           # to that directory. See https://bit.ly/3F5wV1v for more details.
