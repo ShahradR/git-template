@@ -16,7 +16,7 @@ jobs:
       contents: write
     steps:
       - name: Fetch Sources
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Update Dependabot scope
         run: |
           sed -i "s/prefix: fix/prefix: ci/g" .github/dependabot.yaml
