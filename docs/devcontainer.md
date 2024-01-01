@@ -64,6 +64,32 @@ Windows Subsystem for Linux documentation][wsl-install] for more details.
 
 TODO
 
+## Running using IntelliJ IDEA
+
+Starting with [IntelliJ IDEA EAP 2023.2][intellij-2023.2-eap-notes], you can now
+use your development containers in IntelliJ IDEA.
+
+!!! note Limited support for devcontainer features
+
+    Note that at the time of writing, IntelliJ IDEA only supports a subset of
+    the devcontainer specification. Specifically:
+
+      - [IntelliJ IDEA EAP 2023.2][intellij-2023.2-eap-notes] introduces
+        development container support
+      - [IntelliJ IDEA 2023.3 EAP 6][intellij-2023.3_6-eap-notes] adds support
+        for features, Docker Compose, and automatic port forwarding
+
+    For more details, see [Dev Container Prerequisites and Limitations]
+    [intellij-container-prerequisites] in the IntelliJ IDEA documentation.
+
+You can launch your Dev Container by opening the
+`.devcontainer/devcontainer.json` file from the IntelliJ IDEA IDE, clicking on
+the box icon in the gutter, and choosing **Create Dev Container and Mount
+Sources...** from the context menu that appears.
+
+![Launch Dev Container](./images/intellij-launch-devcontainer-light.png#only-light)
+![Launch Dev Container](./images/intellij-launch-devcontainer-dark.png#only-dark)
+
 ## Add your personal dotfiles to the container
 
 While the developer container repository contains project-specific tools and
@@ -92,6 +118,12 @@ for your account_ page in the GitHub Docs][dotfiles] for more details.
 [vscode-devcontainer]:
   https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 [wsl-config]: https://learn.microsoft.com/en-us/windows/wsl/wsl-config
+[intellij-2023.2-eap-notes]:
+  https://blog.jetbrains.com/idea/2023/06/intellij-idea-2023-2-eap-6/#support-for-dev-containers
+[intellij-2023.3_6-eap-notes]:
+  https://blog.jetbrains.com/idea/2023/06/intellij-idea-2023-2-eap-6/#support-for-dev-containers
+[intellij-container-prerequisites]:
+  https://www.jetbrains.com/help/idea/prerequisites-for-dev-containers.html
 
 <!-- markdownlint-enable link-image-reference-definitions -->
 
