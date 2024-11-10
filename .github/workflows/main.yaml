@@ -33,6 +33,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4.0.0
         with:
-          node-version: 14.18.1
+          node-version: lts/*
       - name: Release
         run: npx semantic-release@v18.0.0
